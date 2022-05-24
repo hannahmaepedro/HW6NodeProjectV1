@@ -26,10 +26,9 @@
       <h1>Let's go on a FOOD TRIP</h1>
       <div data-role="navbar" data-theme='b'>
         <ul>
-            <li><a href="#home">Home Page</a></li>
+            <li><a href="#Home">Home Page</a></li>
             <li><a href="#ListAll">Must Visit Restaurant</a></li>
-            <li><a href="#Load">Add It To My List</a></li>
-            <li><a href="#Decide">Where to Eat Next?</a></li>
+            <li><a href="#Load">Add Restaurant to Visit</a></li>
         </ul>
       </div><!-- /navbar -->
     </div>
@@ -37,7 +36,8 @@
     <!--   page content -->
     <div data-role="content" data-theme='b'>
       <div class="newFont">
-        <h2> Welcome!</h2>
+        <h2 class = "myHeader"> Welcome!</h2>
+        <img class="center" id="plateimage" src="./images/plate.png" alt="picture of a plate">
       </div>
     </div>
 
@@ -58,8 +58,7 @@
         <ul>
             <li><a href="#home">Home Page</a></li>
             <li><a href="#ListAll">Must Visit Restaurant</a></li>
-            <li><a href="#Load">Add It To My List</a></li>
-            <li><a href="#Decide">Where to Eat Next?</a></li>
+            <li><a href="#Load">Add Restaurant to Visit</a></li>
         </ul>
       </div><!-- /navbar -->
 
@@ -70,6 +69,7 @@
       <div id="mustVisitList">
         <ul id="myul"></ul>
       </div>
+
       <input type="button" value="Sort by name" id="buttonSortName" data-inline="true" />
       <input type="button" value="Sort by price range" id="buttonSortPriceRange" data-inline="true" />
     </div>
@@ -94,8 +94,7 @@ It will contain list of all the restaurants -->
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#ListAll">Must Visit Restaurant</a></li>
-          <li><a href="#Load">Add It To My List</a></li>
-          <li><a href="#Decide">Where to Eat Next?</a></li>
+          <li><a href="#Load">Add Restaurant to Visit</a></li>
         </ul>
       </div><!-- /navbar -->
 
@@ -111,6 +110,8 @@ It will contain list of all the restaurants -->
       <input type="text" value="" id="city" />
       Enter the state <br />
       <input type="text" value="" id="state" />
+      Enter the website <br />
+      <input type = "text" value ="" id = "URL" />
       
         <div class="ui-field-contain1">
           <label for="select-cuisine">Select the cuisine</label>
@@ -136,10 +137,9 @@ It will contain list of all the restaurants -->
                 <option value="$$$">$$$</option>
                 <option value="$$$$">$$$$</option>
             </select>
-          </div>
+        </div>
     
-    
-      <input type="button" value="Add the restaurant" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Add restaurant" id="buttonAdd" data-inline="true" />
       <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
     </div>
 
@@ -152,30 +152,28 @@ It will contain list of all the restaurants -->
   <!-- End of  ADD page ------------------------------------------------------------------>
 
 
-<!-- Start of  DECIDE page ------------------------------------------------------------------>
-<!-- This page will help the user to be able to try something new if they have trouble deciding what to eat next
-They will be able to play a game to predict where to eat next -->
-<div data-role="page" id="Decide">
+<!-- Start of  DETAILS page ------------------------------------------------------------------>
+<!-- This page will help the user to be able to try something new if they have trouble deciding what to eat next -->
+<div data-role="page" id="details">
   <!--   page header -->
   <div data-role="header" data-theme='a'>
-    <h1>Have you Decided Where To Eat Out Next?</h1>
+    <h1>More About the Restaurant</h1>
     <div data-role="navbar" data-theme='b'>
       <ul>
         <li><a href="#home">Home Page</a></li>
         <li><a href="#ListAll">Must Visit Restaurant</a></li>
-        <li><a href="#Load">Add It To My List</a></li>
-        <li><a href="#Decide">Where to Eat Next?</a></li>
+        <li><a href="#Load">Add Restaurant to Visit</a></li>
       </ul>
     </div><!-- /navbar -->
   </div>
 
   <!--  content -->
   <div data-role="content" data-theme='b'>
-    <div class="play">
-      <h2>Can't decide what to try next?</h2>
-      <br>
-
-      <h3>Let's play a game</h3>
+  <div class="detail">
+      <h3>welcome to the details page</h3>
+      <h4>But which li did you click?? How can I know?</h4>
+      <h4>We can now get the ID out of local storage</h4>
+      <p id="someID"></p>
     </div>
   </div>
 
